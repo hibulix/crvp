@@ -1,0 +1,4 @@
+services:
+#    ka_platform.example:
+#        class: KA\PlatformBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

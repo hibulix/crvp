@@ -1,0 +1,107 @@
+<h3>S'enregister</h3>
+
+<div class="well">
+	{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+		{# Pour les erreurs #}
+		{{ form_errors(form) }}
+		
+		
+		{# TITLE #}
+		<div class="form-group">
+			{# Génération du label #}
+			{{ form_label(form.title, "Civilité", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+		
+			{# Affichage des erreurs pour ce champ précis #}
+			{{ form_errors(form.title) }}
+			
+			<div class="col-sm-4">
+				{# Génération de l'input #}
+				{{ form_widget(form.title, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+	
+		{# LASTNAME #}
+		<div class="form-group">
+			{{ form_label(form.lastname, "Nom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.lastname) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.lastname, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# FIRSNAME #}
+		<div class="form-group">
+			{{ form_label(form.firstname, "Prénom", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.firstname) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.firstname, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# DATE OF BIRTH #}
+		<div class="form-group">
+			{{ form_label(form.dateofbirth, "Date de naissance", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.dateofbirth) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.dateofbirth, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# PRACITIONER #}
+		<div class="form-group">
+			{{ form_label(form.practitioner, "Praticien", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.practitioner) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.practitioner, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# LOGIN #}
+		<div class="form-group">
+			{{ form_label(form.login, "Identifiant", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.login) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.login, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# PASSWORD #}
+		<div class="form-group">
+			{{ form_label(form.password, "Mot de passe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.password) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# EMAIL #}
+		<div class="form-group">
+			{{ form_label(form.mail, "Mail", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.mail) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.mail, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+
+		
+		
+		
+		<div>                
+			<label class="required">Specialists</label>
+			<div id="ka_platformbundle_user_edit_specialists" data-prototype="&lt;div&gt;                &lt;label class=&quot;required&quot;&gt;__name__label__&lt;/label&gt;&lt;div id=&quot;ka_platformbundle_user_edit_specialists___name__&quot;&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___title&quot; class=&quot;required&quot;&gt;Title&lt;/label&gt;&lt;select id=&quot;ka_platformbundle_user_edit_specialists___name___title&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][title]&quot;&gt;&lt;option value=&quot;Mr&quot;&gt;Monsieur&lt;/option&gt;&lt;option value=&quot;Mme&quot;&gt;Madame&lt;/option&gt;&lt;option value=&quot;Mlle&quot;&gt;Mademoiselle&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___lastname&quot; class=&quot;required&quot;&gt;Lastname&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___lastname&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][lastname]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___firstname&quot; class=&quot;required&quot;&gt;Firstname&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___firstname&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][firstname]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___practitioner&quot;&gt;Practitioner&lt;/label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___practitioner&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][practitioner]&quot; value=&quot;1&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___login&quot; class=&quot;required&quot;&gt;Login&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___login&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][login]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___password&quot; class=&quot;required&quot;&gt;Password&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___password&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][password]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___mail&quot; class=&quot;required&quot;&gt;Mail&lt;/label&gt;&lt;input type=&quot;email&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___mail&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][mail]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_specialists___name___comments&quot;&gt;Comments&lt;/label&gt;&lt;textarea id=&quot;ka_platformbundle_user_edit_specialists___name___comments&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][comments]&quot;&gt;&lt;/textarea&gt;&lt;/div&gt;&lt;div&gt;                &lt;label class=&quot;required&quot;&gt;Dateofbirth&lt;/label&gt;&lt;div id=&quot;ka_platformbundle_user_edit_specialists___name___dateofbirth&quot;&gt;&lt;select id=&quot;ka_platformbundle_user_edit_specialists___name___dateofbirth_month&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][dateofbirth][month]&quot;&gt;&lt;option value=&quot;1&quot;&gt;Jan&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;Feb&lt;/option&gt;&lt;option value=&quot;3&quot;&gt;Mar&lt;/option&gt;&lt;option value=&quot;4&quot;&gt;Apr&lt;/option&gt;&lt;option value=&quot;5&quot;&gt;May&lt;/option&gt;&lt;option value=&quot;6&quot;&gt;Jun&lt;/option&gt;&lt;option value=&quot;7&quot;&gt;Jul&lt;/option&gt;&lt;option value=&quot;8&quot;&gt;Aug&lt;/option&gt;&lt;option value=&quot;9&quot;&gt;Sep&lt;/option&gt;&lt;option value=&quot;10&quot;&gt;Oct&lt;/option&gt;&lt;option value=&quot;11&quot;&gt;Nov&lt;/option&gt;&lt;option value=&quot;12&quot;&gt;Dec&lt;/option&gt;&lt;/select&gt;&lt;select id=&quot;ka_platformbundle_user_edit_specialists___name___dateofbirth_day&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][dateofbirth][day]&quot;&gt;&lt;option value=&quot;1&quot;&gt;1&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2&lt;/option&gt;&lt;option value=&quot;3&quot;&gt;3&lt;/option&gt;&lt;option value=&quot;4&quot;&gt;4&lt;/option&gt;&lt;option value=&quot;5&quot;&gt;5&lt;/option&gt;&lt;option value=&quot;6&quot;&gt;6&lt;/option&gt;&lt;option value=&quot;7&quot;&gt;7&lt;/option&gt;&lt;option value=&quot;8&quot;&gt;8&lt;/option&gt;&lt;option value=&quot;9&quot;&gt;9&lt;/option&gt;&lt;option value=&quot;10&quot;&gt;10&lt;/option&gt;&lt;option value=&quot;11&quot;&gt;11&lt;/option&gt;&lt;option value=&quot;12&quot;&gt;12&lt;/option&gt;&lt;option value=&quot;13&quot;&gt;13&lt;/option&gt;&lt;option value=&quot;14&quot;&gt;14&lt;/option&gt;&lt;option value=&quot;15&quot;&gt;15&lt;/option&gt;&lt;option value=&quot;16&quot;&gt;16&lt;/option&gt;&lt;option value=&quot;17&quot;&gt;17&lt;/option&gt;&lt;option value=&quot;18&quot;&gt;18&lt;/option&gt;&lt;option value=&quot;19&quot;&gt;19&lt;/option&gt;&lt;option value=&quot;20&quot;&gt;20&lt;/option&gt;&lt;option value=&quot;21&quot;&gt;21&lt;/option&gt;&lt;option value=&quot;22&quot;&gt;22&lt;/option&gt;&lt;option value=&quot;23&quot;&gt;23&lt;/option&gt;&lt;option value=&quot;24&quot;&gt;24&lt;/option&gt;&lt;option value=&quot;25&quot;&gt;25&lt;/option&gt;&lt;option value=&quot;26&quot;&gt;26&lt;/option&gt;&lt;option value=&quot;27&quot;&gt;27&lt;/option&gt;&lt;option value=&quot;28&quot;&gt;28&lt;/option&gt;&lt;option value=&quot;29&quot;&gt;29&lt;/option&gt;&lt;option value=&quot;30&quot;&gt;30&lt;/option&gt;&lt;option value=&quot;31&quot;&gt;31&lt;/option&gt;&lt;/select&gt;&lt;select id=&quot;ka_platformbundle_user_edit_specialists___name___dateofbirth_year&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][dateofbirth][year]&quot;&gt;&lt;option value=&quot;2010&quot;&gt;2010&lt;/option&gt;&lt;option value=&quot;2011&quot;&gt;2011&lt;/option&gt;&lt;option value=&quot;2012&quot;&gt;2012&lt;/option&gt;&lt;option value=&quot;2013&quot;&gt;2013&lt;/option&gt;&lt;option value=&quot;2014&quot;&gt;2014&lt;/option&gt;&lt;option value=&quot;2015&quot;&gt;2015&lt;/option&gt;&lt;option value=&quot;2016&quot;&gt;2016&lt;/option&gt;&lt;option value=&quot;2017&quot;&gt;2017&lt;/option&gt;&lt;option value=&quot;2018&quot;&gt;2018&lt;/option&gt;&lt;option value=&quot;2019&quot;&gt;2019&lt;/option&gt;&lt;option value=&quot;2020&quot;&gt;2020&lt;/option&gt;&lt;/select&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;button type=&quot;submit&quot; id=&quot;ka_platformbundle_user_edit_specialists___name___save&quot; name=&quot;ka_platformbundle_user_edit[specialists][__name__][save]&quot;&gt;Save&lt;/button&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"></div>
+		</div>
+	
+		<div>
+			<label class="required">Movies</label>
+			<div id="ka_platformbundle_user_edit_movies" data-prototype="&lt;div&gt;                &lt;label class=&quot;required&quot;&gt;__name__label__&lt;/label&gt;&lt;div id=&quot;ka_platformbundle_user_edit_movies___name__&quot;&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_movies___name___url&quot; class=&quot;required&quot;&gt;Url&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_movies___name___url&quot; name=&quot;ka_platformbundle_user_edit[movies][__name__][url]&quot; required=&quot;required&quot; maxlength=&quot;255&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_movies___name___size&quot; class=&quot;required&quot;&gt;Size&lt;/label&gt;&lt;input type=&quot;number&quot; id=&quot;ka_platformbundle_user_edit_movies___name___size&quot; name=&quot;ka_platformbundle_user_edit[movies][__name__][size]&quot; required=&quot;required&quot; /&gt;&lt;/div&gt;&lt;div&gt;                &lt;label for=&quot;ka_platformbundle_user_edit_movies___name___user&quot;&gt;User&lt;/label&gt;&lt;input type=&quot;text&quot; id=&quot;ka_platformbundle_user_edit_movies___name___user&quot; name=&quot;ka_platformbundle_user_edit[movies][__name__][user]&quot; /&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;"></div>
+		</div>
+	
+		<input type="hidden" id="ka_platformbundle_user_edit__token" name="ka_platformbundle_user_edit[_token]" value="LkLz59s4q48sjqMgwR3_vWIcJtWYk70veJ6aMA4ahEA" />
+		
+		
+		{# BOUTON #}
+		{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+		
+		{# Fermeture de la balise <form> du formulaire #}
+		{{ form_end(form) }}
+</div>

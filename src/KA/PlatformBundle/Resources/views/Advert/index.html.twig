@@ -1,0 +1,237 @@
+{% extends "KAPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+	Acceuil - {{ parent() }}
+{% endblock %}
+
+{% block stylesheets %}
+	{{ parent() }}
+	<style>
+		.carousel-inner > .item > img,
+		.carousel-inner > .item > a > img {
+			width: 70%;
+			margin: auto;
+		}
+	</style>
+{% endblock %}
+
+{% block kaplatform_body %}
+	<div id="myCarousel" class="carousel slide sonata-media-block-gallery-container" data-interval="3000" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li class="item1 active"></li>
+			<li class="item2"></li>
+			<li class="item3"></li>
+			<li class="item4"></li>
+			<li class="item5"></li>
+			<li class="item6"></li>
+			<li class="item7"></li>
+			<li class="item8"></li>
+			<li class="item9"></li>
+			<li class="item10"></li>
+			<li class="item11"></li>
+			<li class="item12"></li>
+		</ol>
+				
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner" role="listbox">
+			<div class="item active">
+				<img src="/Symfony/web/images/IMG_1991.JPG" alt="img1" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>Title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_1994.JPG" alt="img2" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+			
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_1995.JPG" alt="img3" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_1996.JPG" alt="img4" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_1997.JPG" alt="img5" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_1998.JPG" alt="img6" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2001.JPG" alt="img8" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2003.JPG" alt="img9" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2004.JPG" alt="img10" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2005.JPG" alt="img11" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2007.JPG" alt="img12" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+
+			<div class="item">
+				<img src="/Symfony/web/images/IMG_2008.JPG" alt="img13" width="1536" height="2048">
+				<div class="carousel-caption">
+					<h3>title</h3>
+					<p>Phrase d'accroche</p>
+				</div>
+			</div>
+		</div>
+		<!-- Controls -->
+		<!--<a class="left carousel-control" href="#myCarousel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#myCarousel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a> -->
+	</div>
+	
+	<div class="row">
+		<div class="col-md-8">
+			<h4>Présentation</h4>
+			
+			<p> Le Centre de Rééducation du Vert-Pré est un établissement où divers soins relevants
+			de la kinésithérapie son dispensés par une équipe de professionnels de santé.<br />
+			
+			Le centre existe depuis plus de ... ans et s'évertue d'étendre les types de soins proposés
+			ainsi que la qualité de ses services.<br />
+			</p>
+		</div>
+		<div class="col-md-8">
+			<h4>Soins</h4>
+		
+			<p>
+				<a href="{{ path('ka_platform_kinesie') }}"><img class="imageFlottante" src="/Symfony/web/images/kinesitherapie_min.jpg" alt="Kinésithérapie" />  Kinésithérapie
+			</p>
+			<br />
+			<p>
+				<a href="{{ path('ka_platform_vestibulaire') }}"><img class="imageFlottante" src="/Symfony/web/images/vestibulaire_min.jpg" alt="Rééducation vestibulaire" />  Rééducation vestibulaire
+			</p>
+			<br />
+			<p>
+				<a href="{{ path('ka_platform_massage') }}"><img class="imageFlottante" src="/Symfony/web/images/massage_min.jpg" alt="Massage bien-être / Endermologie" />  Massage bien-être et Cellu M6&reg; (endermologie)
+			</p>
+			<br />
+			<p>
+				<a href="{{ path('ka_platform_ecoledudos') }}"><img class="imageFlottante" src="/Symfony/web/images/ecoledudos_min.jpg" alt="Ecole du dos" />  Ecole du dos
+			</p>
+			<br />
+			<p>
+				<a href="{{ path('ka_platform_osteopathie') }}"><img class="imageFlottante" src="/Symfony/web/images/osteopathie_min.jpg" alt="Osthéopathie" />  Osthéopathie
+			</p>
+			<br />
+			<p>
+				<a href="{{ path('ka_platform_acupuncture') }}"><img class="imageFlottante" src="/Symfony/web/images/acupuncture_min.jpg" alt="Acupuncture / Réflexiologie" />  Acupuncture et Réflexiologie
+			</p>
+			<br />
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script>
+		
+		$(document).ready(function(){
+			// Activate Carousel
+			$("#myCarousel").carousel();
+			
+			// Enable Carousel Indicators
+			$(".item1").click(function(){
+				$("#myCarousel").carousel(0);
+			});
+			$(".item2").click(function(){
+				$("#myCarousel").carousel(1);
+			});
+			$(".item3").click(function(){
+				$("#myCarousel").carousel(2);
+			});
+			$(".item4").click(function(){
+				$("#myCarousel").carousel(3);
+			});
+			$(".item5").click(function(){
+				$("#myCarousel").carousel(4);
+			});
+			$(".item6").click(function(){
+				$("#myCarousel").carousel(5);
+			});
+			$(".item7").click(function(){
+				$("#myCarousel").carousel(6);
+			});
+			$(".item8").click(function(){
+				$("#myCarousel").carousel(7);
+			});
+			$(".item9").click(function(){
+				$("#myCarousel").carousel(8);
+			});
+			$(".item10").click(function(){
+				$("#myCarousel").carousel(9);
+			});
+			$(".item11").click(function(){
+				$("#myCarousel").carousel(10);
+			});
+			$(".item12").click(function(){
+				$("#myCarousel").carousel(11);
+			});
+			
+			// Enable Carousel Controls
+			$(".left").click(function(){
+				$("#myCarousel").carousel("prev");
+			});
+			$(".right").click(function(){
+				$("#myCarousel").carousel("next");
+			});
+		});
+	</script>
+{% endblock %}

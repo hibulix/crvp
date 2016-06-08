@@ -1,0 +1,11 @@
+KA\PlatformBundle\Entity\Practician:
+    type: entity
+    table: null
+    repositoryClass: KA\PlatformBundle\Entity\PracticianRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    lifecycleCallbacks: {  }

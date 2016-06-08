@@ -1,0 +1,22 @@
+{% extends "KAPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+	Administration - {{ parent() }}
+{% endblock %}
+
+{% block kaplatform_body %}
+
+<div class="row">
+<div class="object-is-container" id="PanelBlocs">
+	<div class="test" id="Box1">
+		<p><a href="{{ path('ka_platform_add_practician') }}"><img class="imagebloc" src="/Symfony/web/images/add_medecin.png" alt="" />Ajouter un nouveau médecin</p>
+		<p><a href="{{ path('ka_platform_remove_practician') }}"><img class="imagebloc" src="/Symfony/web/images/supp_medecin.png" alt="" />Supprimer un médecin</p>
+	</div>
+
+	<div class="test" id="Box1">
+		<p><a href="{{ path('ka_platform_add_patient') }}"><img class="imagebloc" src="/Symfony/web/images/add_patient.png" alt="" />Ajouter un nouveau patient</p>
+		<p><a href="{{ path('ka_platform_remove_patient') }}"><img class="imagebloc" src="/Symfony/web/images/supp_patient.png" alt="" />Supprimer un patient</p>
+	</div>
+</div>
+</div>
+{% endblock %}

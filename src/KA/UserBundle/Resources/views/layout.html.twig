@@ -1,0 +1,16 @@
+{% extends "::layout.html.twig" %}
+
+{% block body %}
+	
+	{# Affichage des messages flash que définissent les contrôleurs du bundle #}
+	{% for key, message in app.session.flashbag.all() %}
+		<div class="alert alert-{{ key }}">
+			{{ message|trans({}, 'FOSUserBundle') }}
+		</div>
+	{% endfor %}
+	
+	{# Block pour afficher les autres vues du bundle #}
+	{% block fos_user_content %}
+	{% endblock fos_user_content %}
+	
+{% endblock %}

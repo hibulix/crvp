@@ -1,0 +1,41 @@
+<h3>S'identifer</h3>
+
+<div class="well">
+	{{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+		{# Pour les erreurs #}
+		{{ form_errors(form) }}
+		
+		{# LOGIN #}
+		<div class="form-group">
+			{{ form_label(form.ident, "Identifiant", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.ident) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.ident, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# PASSWORD #}
+		<div class="form-group">
+			{{ form_label(form.password, "Mot de passe", {'label_attr': {'class': 'col-sm-3 control-label'}}) }}
+			{{ form_errors(form.password) }}
+			<div class="col-sm-4">
+				{{ form_widget(form.password, {'attr': {'class': 'form-control'}}) }}
+			</div>
+		</div>
+		
+		{# BOUTON #}
+		{{ form_widget(form.save, {'attr': {'class': 'btn btn-primary'}}) }}
+		
+		{# Génération automatique des champs nom écrits #}
+		{{ form_rest(form) }}
+		
+		{# Fermeture de la balise <form> du formulaire #}
+		{{ form_end(form) }}
+		
+</div>
+
+<div class="row">
+	<ul class="nav nav-pills nav-stacked">
+		<li><a href="{{ path('ka_platform_subscribe') }}">S'inscrire</a></li>
+	</ul>
+</div>

@@ -1,0 +1,45 @@
+<div class="well"> 
+	<form action="{{ path('ka_platform_contact') }}" method="post" {{ form_enctype(form) }} class="ka">
+		{{ form_errors(form) }}
+		
+		{{ form_row(form.lastname) }}
+		{{ form_row(form.firstname) }}
+		{{ form_row(form.email) }}
+		{{ form_row(form.phoneNumber) }}
+		{{ form_row(form.subject) }}
+		{{ form_row(form.body) }}
+		
+		{{ form_rest(form) }}
+		{{ form_widget(form) }}
+		
+		<input type="submit" value="Envoyer" class="btn btn-primary" />
+	</form>
+</div>
+			
+		<!--
+			<div class="form-inline">
+				<label for="lastname">Nom :</label>
+				<input type="text" class="form-control" id="lastname">
+			</div>
+			<div class="form-inline">
+				<label for="firstname">Prénom :</label>
+				<input type="text" class="form-control" id="firstname">
+			</div>
+			<div class="form-inline">
+				<label for="tel">Téléphone :</label>
+				<input type="text" class="form-control" id="phone">
+			</div>
+			<div class="form-inline">
+				<label for="email">Email :</label>
+				<input type="email" class="form-control" id="email" placeholder="example@mail.com">
+			</div>
+			<div class="form-inline">
+				<label for="subject">Objet :</label>
+				<input type="text" class="form-control" id="subject">
+			</div>
+			<div class="form-inline">
+				<label for="question">Message :</label>
+				<textarea type="text" class="form-control" id="question"></textarea
+			</div>
+			<button type="submit" class="btn btn-default">Envoyer</button>
+		</form> -->

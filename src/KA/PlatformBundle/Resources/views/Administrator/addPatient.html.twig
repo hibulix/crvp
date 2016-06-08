@@ -1,0 +1,17 @@
+{% extends "KAPlatformBundle::layout.html.twig" %}
+
+{% block title %} Gestion des praticiens - {{ parent() }}
+{% endblock %}
+
+{% block kaplatform_boby %}
+
+<div class="row">
+	<select>
+		{% for patient in listPatients %}
+			<option value="{{ patient }}"></option>
+		{% endfor %}
+	</select>
+</div>
+
+
+{% endblock %}

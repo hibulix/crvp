@@ -1,0 +1,20 @@
+KA\PlatformBundle\Entity\Patient:
+    type: entity
+    table: null
+    repositoryClass: KA\PlatformBundle\Entity\PatientRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        name:
+            type: string
+            length: '50'
+        rootdir:
+            type: string
+            length: 255
+        date:
+            type: datetime
+    lifecycleCallbacks: {  }

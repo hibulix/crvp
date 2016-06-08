@@ -1,0 +1,28 @@
+{% extends "KAPlatformBundle::layout.html.twig" %}
+
+{% block title %}
+	Intranet - {{ parent() }}
+{% endblock %}
+
+{% block kaplatform_body %}
+	
+	<p> {{ app.user.id }} </br>
+		{{ app.user.username }} </br>
+		{{ app.user.password }} </br>
+		{{ app.user.lastname }} </br>
+		{{ app.user.firstname }} </br>
+		{{ app.user.email }} </br>
+
+		{{ app.user.adress }}  </br>
+		{{ app.user.business_telephone }} </br>
+		{{ app.user.mobile_telephone }} </br>
+
+		{{ dump(app.user.roles) }}
+	
+	
+	
+	
+	
+	</p>
+
+{% endblock %}

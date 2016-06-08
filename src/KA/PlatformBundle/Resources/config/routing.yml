@@ -1,0 +1,79 @@
+##### Routes Advert #####
+
+ka_platform_homepage:
+    path:     /
+    defaults: { _controller: KAPlatformBundle:Advert:index }
+    requirements:
+        _method:    GET
+
+ka_platform_contact:
+    path:     /contact
+    defaults: { _controller: KAPlatformBundle:Advert:contact }
+    requirements:
+        _method:    GET|POST
+
+ka_platform_kinesie:
+    path:     /kinesitherapie
+    defaults: { _controller: KAPlatformBundle:Advert:kinesie }
+
+ka_platform_acupuncture:
+    path:     /acupuncture
+    defaults: { _controller: KAPlatformBundle:Advert:acupuncture }
+
+ka_platform_osteopathie:
+    path:     /osteopathie
+    defaults: { _controller: KAPlatformBundle:Advert:osteopathie }
+
+ka_platform_vestibulaire:
+    path:     /vestibulaire
+    defaults: { _controller: KAPlatformBundle:Advert:vestibulaire }
+
+ka_platform_ecoledudos:
+    path:     /ecoleDuDos
+    defaults: { _controller: KAPlatformBundle:Advert:ecoledudos }
+
+ka_platform_massage:
+    path:     /massage
+    defaults: { _controller: KAPlatformBundle:Advert:massage }
+
+# ka_platform_equipe:
+    # path:     /equipe
+    # defaults: { _controller: KAPlatformBundle:Advert:equipe }
+
+
+##### Routes Administrator #####
+
+ka_platform_admin:
+    path:     /admin
+    defaults: { _controller: KAPlatformBundle:Administrator:admin }
+
+ka_platform_add_practician:
+    path:     /admin/practician/add
+    defaults: { _controller: KAPlatformBundle:Administrator:addPractician }
+
+ka_platform_remove_practician:
+    path:     /admin/practician/remove
+    defaults: { _controller: KAPlatformBundle:Administrator:displayall }
+
+ka_platform_add_patient:
+    path:     /admin/patient/add
+    defaults: { _controller: KAPlatformBundle:Administrator:addPatient }
+
+ka_platform_remove_patient:
+    path:     /admin/patient/remove
+    defaults: { _controller: KAPlatformBundle:Administrator:displayall }
+
+# ka_platform_subscribe:
+    # path:     /subscribe
+    # defaults: { _controller: KAPlatformBundle:Administrator:subscribe }
+
+# ka_platform_connect:
+    # path:     /connect
+    # defaults:  { _controller: KAPlatformBundle:Administrator:connect }
+
+
+##### Routes Practician #####
+
+ka_platform_intranet:
+    path:     /intranet
+    defaults: { _controller: KAPlatformBundle:Practician:intranet }

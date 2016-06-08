@@ -1,0 +1,5 @@
+parameters:
+     # Adresse du/des moderateurs du sites
+    ka_platform.emails.contact_mail: cesaire.daniel@gmail.com
+     # Adresse des dossiers Patients
+    ka_platform.patient_folder: C:\Documents and Settings\wardan\Mes documents\Dossier_patient
