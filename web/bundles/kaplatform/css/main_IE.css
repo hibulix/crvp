@@ -1,0 +1,17 @@
+/* Uniquement pour IE */ 
+html>body #menu li {
+	border-right: 1px solid transparent; /* Bordure transparente à droite des éléments */
+}
+html>body #menu li ul li {
+	border-top: 1px solid transparent;
+}
+html>body #menu li ul ul {
+	border-left: 1px solid transparent;
+}
+#menu li.sfhover ul ul {
+	left: -999em; /* Mise hors du champ de vision */
+}
+#menu li.sfhover ul, #menu li li.sfhover ul  {
+	left: auto; /* Repositionnement normal */
+	min-height: 0;
+}

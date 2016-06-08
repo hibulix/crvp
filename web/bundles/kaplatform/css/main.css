@@ -1,0 +1,108 @@
+body {
+	padding-top: 12px;
+	#background-color: blue;
+}
+h2 {
+	font-weight: bold;
+}
+h4 {
+	font-weight: bold;
+}
+.imageFlottante {
+	float: left;
+}
+#header {
+	background-image: url("../images/banderol_vert_pre.jpg");
+}
+#menu, #menu ul {	/* Liste */
+	padding: 0; /* Marge interieur */
+	margin: 1;  /* Marge extérieur */
+	list-style: none; /* Suppression du style par defaut */
+	line-height: 45px; /* Hauteur des éléments */
+	text-align: center;
+}
+#menu { /* Ensemble du menu */
+	font-weight: bold; /* Text en gras */
+	font-size: 13px; /* Taille du texte */
+}
+#menu a { /* Contenu des listes */
+	display: block; 
+	padding: 0;
+	background: #000; 
+	color: #fff;
+	text-decoration: none; /* Suppression du style souligé */
+	width: 100px; /* Largeur */
+}
+#menu li { /* Elements des listes */
+	display: inline;
+	float: left; /* Pour IE */
+	border-right: 1px solid #fff; /* Bordure blanche à droite des éléments */ 
+	margin-right: 1px;
+}
+#menu li a {
+	padding: 4px 20px;
+	border: 1px solid #600;
+	line-height: 45px;
+	text-decoration: none;
+}
+#menu a:hover { /* Lorsque la souris passe sur un lien */
+	color: white;
+	background: #fff;
+}
+/* Section Sous-listes */
+#menu li ul {
+	position: absolute; /* Position absolue */
+	width: 100% /* Largeur */
+	/* left: -999em !important;  Mise hors du champ de vision */
+}
+#menu li ul li { /* Elements des sous-listes */
+	border-top: 1px solid transparent; /* Bordure transparente en haut des éléments */
+}
+#menu li a:hover, #menu li a :focus, #menu li a:active {
+	background: #900;
+}
+/* Section Sous sous-listes */
+#menu li ul ul { 
+	margin: -22px 0 0 160px;
+	border-left: 1px solid #fff; /* Bordure à gauche */
+}
+#menu li:hover ul ul {
+	left: -999em; /* Mise hors du champ de vision */
+}
+#menu li:hover ul, #menu li li:hover ul {
+	/* Action sous-listes et sous-sous-listes lorsque la souris passe sur un élément */
+	left: auto; /* Repositionnement normal */
+}
+.nav {
+	line-height: 1;
+}
+.nav a {
+	display: block;
+	/*padding: .5em;*/
+}
+.nav a:focus, .nav a:hover {
+	color: black;
+	background: #ffc;
+}
+.col-md-1 {
+	float: left; /* Affichage horizontal des liens */
+}
+.sub-nav {
+	display: none; /* Masque les sous-titres */
+	position: absolute; /* Evite que la dimension du conteneur ne change lors de l'affichage */
+	left: 0; /* FIX IE7 : Pour que le sous-menu s'aligne avec son conteneur */
+	top: 2em; /* FIX IE7 : Idem, alors on le positionne en bas */
+	white-space: nowrap; /* Empeche le texte de revenir à la ligne */
+	background: white; /* FIX IE7 : Evite que la sous-liste ne disparaisse au moment ou le curseur arrive dessus */
+	margin-top: -10px; /* Pour que le sous-menu recouvre son parent */ 
+	text-align: left !important;
+}
+.col-md-1:hover .sub-nav {
+	display: block !important;
+	left: auto !important;
+	width: auto !important;
+	height: auto !important;
+	overflow: visible !important;
+}
+
+
