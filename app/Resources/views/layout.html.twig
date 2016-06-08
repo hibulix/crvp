@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		
+		<!-- Pour IE : Verifie qu'Internet Explorer utilise la derniere version du moteur de rendu -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- Pour Mobile : On demande que l'affichage occupe tout l'espace dsponible avec une talle de 1 (sans zoom) -->
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<meta name="description" content=""> 
+		<meta name="author" content="">
+		<meta name="keywords" content="Centre de rééducation, Vert-Pré, Le Robert, Kinésithérapie, Massage, Ecole du dos, Acupuncture">
+		
+		<link rel="icon" href="../../web/favicon.ico">
+		
+		<title>
+		{% block title %} CRVP {% endblock %} 
+		</title>  <!-- Titre de l'onglet de la page -->
+		
+		<!-- Bootstrap core CSS -->
+		{% block stylesheets %}
+			
+			<!-- En ligne -->
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+			<!-- En local -->
+			<!-- <link rel="stylesheet" href="../../web/bootstrap-3.5.5-dist/css/bootstrap.min.css"> -->
+			
+			<link rel="stylesheet" href="/Symfony/web/bundles/kaplatform/css/new_main.css" />
+			<!-- Feuille de style juste pour IE -->
+			<!--[if lte IE 6]>
+			<link rel="stylesheet" type="text/css" href="/Symfony/web/bundles/kaplatform/css/main_IE.css" />
+			<![endif-->
+		{% endblock %}
+	</head>
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-inverse">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">CRVP</a>
+					</div>
+					<div>
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="{{ path('ka_platform_homepage') }}">Accueil</a></li>
+							<li class="dropdown">
+								<a class="dropdown-toggle" data-toggle="dropdown" href="#">Soins<span class="caret"></span></a>
+									  <ul class="dropdown-menu">
+										<li><a href="{{ path('ka_platform_kinesie') }}">Kinésithérapie</a></li>
+										<li><a href="{{ path('ka_platform_vestibulaire') }}">Rééducation vestibulaire</a></li>
+										<li><a href="{{ path('ka_platform_massage') }}">Massage Bien-être et Cellu M6&reg;</a></li>
+										<li><a href="{{ path('ka_platform_ecoledudos') }}">Ecole du dos</a></li>
+										<li><a href="{{ path('ka_platform_osteopathie') }}">Ostéopathie</a></li>
+										<li><a href="{{ path('ka_platform_acupuncture') }}">Acupuncture / Réflexiologie plantaire</a></li>
+									  </ul>
+							</li>
+							<li><a href="{{ path('ka_platform_contact') }}">Contact</a></li>
+							{% if is_granted('ROLE_PRACTICIAN') %}
+								<li><a href="{{ path('ka_platform_intranet') }}">Intranet</a></li>
+							{% endif %}
+							
+						</ul>
+						<ul class="nav navbar-nav navbar-right">
+							{# Espace membre :
+								* Si le membre est identifié : lien de déconnexion
+								* Sinon : formulaire de connexion #}
+							{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+								<li><span style="color: grey; text-align: right;"> {{ 'layout.logged_in_as'| trans({'%username%': app.user.username}, 'FOSUserBundle') }}</span></li>
+								<li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>	
+							{# On affiche le formulaire de login, sauf sur la page de connexion #}
+							{% elseif app.request.attributes.get('_route') != 'fos_user_security_login' %}
+								<li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
+								<li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span> S'identifier</a></li>
+							{% endif %}
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<!--
+			<div  id="header" class="jumbotron" >
+				<h2> Centre de Rééducation du Vert-Pré </h2>
+			</div>
+			-->
+			
+				
+				
+
+				{# Contenu central de la page #}
+				<div class="span9" id="content" >
+				{% block body %}
+				{% endblock %}
+				</div> <!-- class: span9 // id: content -->
+			<!-- </div> -->
+
+			<hr>
+
+			<footer class="row">
+				<div class="row page-footer well">                
+					<div class="col-sm-3">                
+						<b><h4>CRVP</h4><p class="handcraft">4, rue Paul Symphor<br />Bourg du Vert-Pré<br />97231 LE ROBERT<br />Tel: 0596 53 19 66</p></b>
+					</div>
+					<div class="col-sm-2 col-sm-offset-1">                
+						<h4>Soins</h4>
+						<ul class="links">
+							<li><a href="{{ path('ka_platform_kinesie') }}">Kinésithérapie</a></li>
+							<li><a href="{{ path('ka_platform_vestibulaire') }}">Rééducation vestibulaire</a></li>
+							<li><a href="{{ path('ka_platform_massage') }}">Massage Bien-être et Cellu M6&reg;</a></li>
+							
+						</ul>
+					</div>
+					
+					<div class="col-sm-2">
+						<h4>Soins (suite)</h4>
+						<ul class="links">
+							<li><a href="{{ path('ka_platform_ecoledudos') }}">Ecole du dos</a></li>
+							<li><a href="{{ path('ka_platform_osteopathie') }}">Ostéopathie</a></li>
+							<li><a href="{{ path('ka_platform_acupuncture') }}">Acupuncture / Réflexiologie plantaire</a></li>
+						</ul>
+					</div>
+
+					<div class="col-sm-2">                
+						<h4>Liens</h4>
+						<ul class="links">
+							<li class="active"><a href="{{ path('ka_platform_homepage') }}">Accueil</a></li>
+							<li><a href="{{ path('ka_platform_contact') }}">Contact</a></li>
+							<li><a href="http://martinique.ordremk.fr/" target="_blank">Ordre des masseurs kinésithérapeutes</a></li>				
+						</ul>
+					</div>
+					
+					<div class="col-sm-2">
+						<h4>Membres</h4>
+						<ul class="links">
+							{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+								<li><a href="{{ path('fos_user_security_logout') }}"><span class="glyphicon glyphicon-log-out"></span> Se déconnecter</a></li>	
+							{# On affiche le formulaire de login, sauf sur la page de connexion #}
+							{% elseif app.request.attributes.get('_route') != 'fos_user_security_login' %}
+								<li><a href="{{ path('fos_user_registration_register') }}"><span class="glyphicon glyphicon-user"></span> S'inscrire</a></li>
+								<li><a href="{{ path('fos_user_security_login') }}"><span class="glyphicon glyphicon-log-in"></span> S'identifier</a></li>
+							{% endif %}
+							{% if is_granted('ROLE_PRACTICIAN') %}
+								<li><a href="{{ path('ka_platform_intranet') }}">Intranet</a></li>
+							{% endif %}
+							{% if is_granted('ROLE_ADMIN') %}
+								<li><a href="{{ path('ka_platform_admin') }}">Administration</a></li>
+							{% endif %}
+							
+						</ul>
+				</div>
+			</footer>
+		</div>
+		
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins)-->
+		{% block javascripts %}
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+			<!-- <script src="//code.jquery.com/jquery-1.10.2.js"></script> -->
+			<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+			<!-- Pour les anciennes version de IE -->
+			<!--[if lte IE 6]>
+			<script type="text/javascript" src="/Symfony/web/menu.js"></script>
+			<![endif-->
+			
+		{% endblock %}
+	</body>
+</html>
